@@ -1,6 +1,20 @@
-# EDATower
+# Angular Material 6
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
+The project provides boilerplate application structure for getting started with below items:
+- Angular 6
+- Angular Material 6
+- Angular Flex
+- Angular Router
+- Angular Http Services
+- Angular Guard
+- Angular Shared Service
+- AgGrid 17
+- AgGrid Cell Renderer
+- Angular Material Reactive Form Validators
+- Multiple Environment Builds - DEV | QA | UAT | PROD
+- Pre-setup Web.Config for IIS Routes
+- File Uploading Component
 
 ## Development server
 
