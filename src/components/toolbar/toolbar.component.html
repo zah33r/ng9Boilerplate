@@ -1,0 +1,24 @@
+<mat-toolbar [ngClass]="{'toolbar-area': !isRowSelected, 'toolbar-area-selected': isRowSelected }" class="bluetoolbar">
+  <mat-toolbar-row *ngIf="componentToolbar == 'dashboard'">
+    <span class="toolbar-spacer"></span>
+    <div *ngIf="!isRowSelected">
+      <span class="toolbar-icon" (click)="AddTowerClick($event)">
+        <mat-icon class="toolbar-icon">add</mat-icon>Add BX</span>
+    </div>
+    <div *ngIf="isRowSelected">
+      <span class="toolbar-icon">
+        <mat-icon class="toolbar-icon">add</mat-icon>Selected Tower</span>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row *ngIf="componentToolbar == 'cedent'">
+    <span class="toolbar-spacer"></span>
+    <div *ngIf="!isRowSelected">
+      <mat-icon class="toolbar-icon">cloud_download</mat-icon>
+      <mat-icon class="toolbar-icon">assignment</mat-icon>
+    </div>
+    <div *ngIf="isRowSelected">
+      <mat-icon class="toolbar-icon">cloud_download</mat-icon>
+      <mat-icon class="toolbar-icon">assignment</mat-icon>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

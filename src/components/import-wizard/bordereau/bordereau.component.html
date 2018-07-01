@@ -1,0 +1,60 @@
+<div style="background-color: white">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--3-col">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Bordereau Name" [formControl]="fcName" required [errorStateMatcher]="matcher" [(ngModel)]="bordereauModel.Name">
+        <mat-error *ngIf="fcName.invalid">{{getErrorMessage(fcName)}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Underwriter" [formControl]="fcUnderwriter" required [errorStateMatcher]="matcher" [(ngModel)]="bordereauModel.Underwriter">
+        <mat-error *ngIf="fcUnderwriter.invalid">{{getErrorMessage(fcUnderwriter)}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col mL25">
+      <p class="mB0 radiolabel">Bordereau Type:</p>
+      <mat-radio-group class="example-radio-group" [(ngModel)]="bordereauModel.Type">
+        <mat-radio-button class="example-radio-button radiostyles" *ngFor="let type of bordereauType" [value]="type.value">
+          {{type.viewValue}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+      <p class="mB0 radiolabel">Notification Frequency:</p>
+      <mat-radio-group class="example-radio-group" [(ngModel)]="bordereauModel.Frequency">
+        <mat-radio-button class="example-radio-button radiostyles" *ngFor="let frequent of frequency" [value]="frequent.value">
+          {{frequent.viewValue}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--3-col selectgridpadding">
+      <mat-select class="selectstyles" placeholder="Select LOB" [formControl]="fcLob" required [errorStateMatcher]="matcher" [(ngModel)]="bordereauModel.LOB"
+        name="lob">
+        <mat-option *ngFor="let lob of lobs" [value]="lob.value">
+          {{lob.viewValue}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="fcLob.invalid">{{getErrorMessage(fcLob)}}</mat-error>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col selectgridpadding mL25">
+      <mat-select class="selectstyles" placeholder="Ceding Company" [formControl]="fcCedingCompany" required [errorStateMatcher]="matcher"
+        [(ngModel)]="bordereauModel.CedingCompany" name="cedingCompany">
+        <mat-option *ngFor="let company of cedingCompanies" [value]="company.value">
+          {{company.viewValue}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="fcCedingCompany.invalid">{{getErrorMessage(fcCedingCompany)}}</mat-error>
+    </div>
+  </div>
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col clear fLeft">
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Comments" rows="5" [formControl]="fcComments" required [errorStateMatcher]="matcher" [(ngModel)]="bordereauModel.Comments"></textarea>
+        <mat-error *ngIf="fcComments.invalid">{{getErrorMessage(fcComments)}}</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+</div>

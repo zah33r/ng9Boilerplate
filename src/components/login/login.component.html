@@ -1,0 +1,25 @@
+<div class="loginwrapper vertical-center">
+  <div class="container text-center">
+    <div class="logincontainer">
+      <div class="login-heading">NG-MATERIAL 6 MANAGEMENT TOOL</div>
+      <div class="sign-in-text">Sign In</div>
+
+
+      <div class="example-container">
+
+        <form class="example-container" [formGroup]="options" [style.fontSize.px]="getFontSize()">
+
+          <mat-form-field class="white-border">
+            <input type="text" matInput placeholder="User Name">
+          </mat-form-field>
+          <mat-form-field class="white-border">
+            <input type="password" matInput placeholder="Password">
+          </mat-form-field>
+          <div class="buttons-container mT10" style="float:right">
+            <button mat-raised-button class="mR-10" color="primary" (click)="login()">LOGIN</button>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+</div>

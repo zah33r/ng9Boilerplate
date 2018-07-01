@@ -1,0 +1,53 @@
+.example-full-width {
+  width: 100%;
+}
+
+.radiolabel {
+  color: rgba(0, 0, 0, .45);
+  font-size: 75%;
+  margin-top: -6px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.radiostyles {
+  margin-right: 15px;
+  font-size: 13px;
+}
+
+.selectstyles {
+  padding: 12px 12px;
+  border-radius: 2px;
+  background-color: #eeeeee;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.selectgridpadding {
+  padding: 0px 18px 0px 9px;
+  margin: 0px;
+}
+
+.mat-select-placeholder {
+  color: #444444 !important;
+  font-size: 14px !important;
+}
+
+.addbutton {
+  min-width: 70px !important;
+  height: 32.4px;
+  border-radius: 2px;
+  background-color: #219eee !important;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  line-height: 1em;
+  padding: 0px 10px 0px 5px !important;
+  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.addbutton i {
+  font-size: 14px !important;
+}
+
+app-bordereau {
+  position: relative;
+  display: block;
+}

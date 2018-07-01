@@ -1,0 +1,14 @@
+<app-header (onMenuClick)="sidenav.toggle()"></app-header>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="push" class="sideNavTheme">
+    <div class="navItems" *ngFor="let route of routes">
+      <nav>
+        <a mat-button routerLink="{{route.link}}">{{route.name}}</a>
+      </nav>
+    </div>
+  </mat-sidenav>
+
+  <div class="example-sidenav-content" class="contentTheme">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>

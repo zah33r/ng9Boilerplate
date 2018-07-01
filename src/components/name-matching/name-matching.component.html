@@ -1,0 +1,17 @@
+<br>
+<div style="background-color: white">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--3-col">
+      <mat-form-field>
+        <input matInput placeholder="Match Threshold" value="">
+      </mat-form-field>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+      <button mat-raised-button color="primary" (click)="applyThreshold()">Apply Threshold</button>
+    </div>
+  </div>
+</div>
+<br>
+<div class="tower-grid">
+  <app-ag-grid-base [rowData]="rowData" [columnDefs]="columnDefs"></app-ag-grid-base>
+</div>

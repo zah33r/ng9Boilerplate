@@ -1,0 +1,14 @@
+.contentTheme {
+  background-color: #ccc9c9;
+  height: 885px;
+}
+
+.sideNavTheme {
+  width: 180px;
+  background-color: #f5f5f5;
+  padding-top: 10px;
+}
+
+.navItems {
+  text-align: center;
+}

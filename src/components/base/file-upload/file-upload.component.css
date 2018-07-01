@@ -1,0 +1,55 @@
+.my-drop-zone {
+  border: dotted 3px lightgray;
+  float: left;
+  width: 97%;
+  padding: 1% 2%;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.nv-file-over {
+  border: dotted 3px red;
+}
+
+/* Default class applied to drop zones on over */
+
+.another-file-over-class {
+  border: dotted 3px green;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.closeBtn {
+  cursor: pointer;
+  text-align: right;
+  padding-top: 5px;
+  color: #ea0909;
+  vertical-align: bottom;
+  padding-left: 10px;
+}
+
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: left
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+}
+
+.uploadedlist {
+  float: left;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  text-align: left;
+  padding: 5px 0px;
+  font-family: 'Open Sans', sans-serif;
+}

@@ -1,0 +1,34 @@
+<div *ngIf="showProgress == false">
+  <h5 style="text-align: left; color: grey">File type expected: *.xls</h5>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div ng2FileDrop [ngClass]="{'nv-file-over': hasBaseDropZoneOver}" (fileOver)="fileOverBase($event)" [uploader]="uploader"
+          class="well my-drop-zone">
+
+          <div class="col-md-9" style="text-align: -webkit-center;">
+
+            <h5 *ngIf="uploader.queue.length == 0" style="color: black">
+              Drag & Drop File or Choose File
+            </h5>
+            <div *ngIf="uploader.queue.length != 0">
+              <div *ngFor="let item of uploader.queue" class="uploadedlist">
+                <div>{{ item?.file?.name }}
+                  <i (click)="item.remove()" class="material-icons closeBtn">close</i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="uploader.queue.length == 0" style="text-align: -webkit-center;margin-bottom: 40px;margin-top: 40px;">
+            <input type="file" ng2FileSelect [uploader]="uploader" multiple/>
+            <br/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="showProgress">
+  <h5 style="text-align: left">{{validateDataMsg}}</h5>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>

@@ -1,0 +1,17 @@
+<app-toolbar [componentToolbar]="'dashboard'" (onAddTowerClick)="onAddTowerClick($event)"></app-toolbar>
+<mat-tab-group [(selectedIndex)]="selectedTabIndex">
+  <mat-tab label="Simple Ag-Grid">
+    <div style="height:800px" *ngIf="selectedTabIndex == 0">
+      <div class="tower-grid">
+        <app-ag-grid-base [rowData]="bxViewrowData" [columnDefs]="bxViewcolumnDefs"></app-ag-grid-base>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Ag-Grid Cell Renderer Example">
+    <div style="height:800px" *ngIf="selectedTabIndex == 1">
+      <div class="tower-grid">
+        <app-ag-grid-base [rowData]="workFlowViewrowData" [columnDefs]="workFlowViewcolumnDefs"></app-ag-grid-base>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>

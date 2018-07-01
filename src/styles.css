@@ -1,0 +1,477 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~ag-grid/dist/styles/ag-grid.css";
+@import "~ag-grid/dist/styles/ag-theme-balham.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html,
+body {
+  margin: 0;
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  background-size: cover;
+  min-height: auto !important;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+}
+
+body {
+  background-color: #e2e2e2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+  margin: 24px 0 16px;
+}
+
+.app-title {
+  color: #000000;
+  font-weight: bold;
+  float: left;
+  font-size: 15px;
+  margin-left: 30px;
+}
+
+.mat-toolbar-multiple-rows {
+  min-height: 45px !important;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  height: 45px !important;
+  padding: 0px !important;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.bluetoolbar {
+  height: 33px !important;
+  min-height: 33px !important;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 2px 5px rgba(0, 0, 0, .18);
+  background: #445370;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.bluetoolbar .mat-toolbar-row,
+.mat-toolbar-single-row {
+  height: 31px !important;
+}
+
+.mat-toolbar-row .mat-icon {
+  font-size: 24px !important;
+  padding: 0px 7px !important;
+}
+
+.toolbar-icon {
+  font-size: 14px;
+}
+
+.navItems a {
+  width: 100%;
+  float: left;
+  text-align: left;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.ag-theme-material {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.ag-theme-material .ag-cell {
+  line-height: 34px !important;
+}
+
+.ag-header-cell {
+  border-bottom: 1px solid #dedede;
+  background: #eeeeee;
+  font-weight: 600 !important;
+  color: #444444 !important;
+  padding-top: 3px;
+  line-height: 30px !important;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+.ag-row .mat-icon {
+  color: #253d97;
+}
+
+.ag-theme-material .ag-header-cell-resize::after {
+  height: 35px !important;
+  margin-top: 0px !important;
+  border: 0px !important;
+}
+
+.ag-theme-material .ag-cell {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.ag-theme-material .ag-header-cell,
+.ag-theme-material .ag-header-group-cell {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.ag-theme-material .ag-icon-checkbox-checked:empty {
+  background-image: url(./assets/download.svg) !important;
+}
+
+.ag-theme-material .ag-filter-select {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: #253d97 !important;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #253d97 !important;
+}
+
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  background-color: rgba(238, 238, 238, 0.8);
+}
+
+.mat-radio-button {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mat-form-field {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.mT0 {
+  margin-top: 0px !important;
+}
+
+.mT5 {
+  margin-top: 5px;
+}
+
+.mB5 {
+  margin-bottom: 5px !important;
+}
+
+.mT8 {
+  margin-top: 8px !important;
+}
+
+.mT10 {
+  margin-top: 10px;
+}
+
+.mR10 {
+  margin-right: 10px !important;
+}
+
+.mR-10 {
+  margin-right: -10px !important;
+}
+
+.sideNavTheme {
+  width: 200px !important;
+}
+
+.fLeft {
+  float: left;
+}
+
+.fRight {
+  float: right;
+}
+
+.mat-form-field-infix {
+  width: 100% !important;
+}
+
+.mat-form-field {
+  width: 100% !important;
+}
+
+.mat-horizontal-stepper-header {
+  height: 35px !important;
+  margin: 0px 20px;
+}
+
+.mat-horizontal-stepper-header-container {
+  width: 100%;
+}
+
+.mat-calendar-body-today.mat-calendar-body-selected {
+  box-shadow: 0 0 0 1px #fff !important;
+}
+
+.mat-calendar-body-cell-content:hover {
+  background-color: #dddddd !important;
+}
+
+.mat-dialog-container {
+  padding: 24px 0px 0px !important;
+  margin: 20px 0px 0px !important;
+  position: relative;
+  height: 95% !important;
+}
+
+.mat-horizontal-stepper-header-container {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.popup-title {
+  font-weight: 500;
+  color: #000000;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.p0 {
+  padding: 0px !important;
+}
+
+.mL0 {
+  margin-left: 0px !important;
+}
+
+.mL15 {
+  margin-left: 15px !important;
+}
+
+.mL25 {
+  margin-left: 25px !important;
+}
+
+.mB0 {
+  margin-bottom: 0px !important;
+}
+
+.mB10 {
+  margin-bottom: 10px !important;
+}
+
+.clear {
+  clear: both;
+}
+
+.toprightuser {
+  width: 115px;
+  position: absolute;
+  right: 10px;
+}
+
+.buttons-container {
+  position: relative;
+  bottom: 0px;
+  margin-right: 13px;
+  float: right;
+}
+
+app-cedent-report {
+  float: left;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.loginwrapper .mat-form-field-appearance-legacy.white-border .mat-form-field-label {
+  color: rgba(255, 255, 255, .95) !important;
+}
+
+.mat-form-field-appearance-legacy.white-border .mat-form-field-underline {
+  background-color: rgba(255, 255, 255, .95) !important;
+}
+
+.width60 {
+  width: 60% !important;
+}
+
+.mat-select-placeholder {
+  color: #444444 !important;
+  font-size: 14px !important;
+}
+
+mat-select {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.mat-horizontal-stepper {
+  position: relative;
+}
+
+button.mat-primary {
+  border-radius: 2px !important;
+  background-color: #253d97 !important;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16) !important;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.popupblueheader {
+  width: 100%;
+  height: 56px;
+  background-color: #253d97;
+  color: #ffffff;
+  font-size: 26px;
+  line-height: 2em;
+  text-indent: 20px;
+}
+
+.popupblueheader .mat-icon-button {
+  float: right;
+}
+
+.popupblueheader .mat-icon-button i {
+  font-size: 32px;
+  margin-top: 12px;
+  margin-right: 8px;
+}
+
+.closebutton-stepper {
+  margin-top: -20px !important;
+  margin-right: 5px !important;
+}
+
+.ag-theme-material .ag-header-cell-menu-button .ag-icon-menu {
+  height: 30px !important;
+}
+
+.mat-stepper-horizontal-line {
+  border-top-width: 0px !important;
+}
+
+.mat-step-header {
+  color: rgba(0, 0, 0, .87);
+  font-size: 12px !important;
+}
+
+.mat-step-label.mat-step-label-active.mat-step-label-selected {
+  font-weight: 600 !important;
+}
+
+.mat-step-label {
+  font-weight: 300 !important;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mat-step-header .mat-step-icon-not-touched {
+  background-color: #ddd !important;
+}
+
+.tower-grid {
+  height: 100%;
+}
+
+.mat-dialog-container {
+  position: relative;
+}
+
+.mat-tab-header {
+  border-bottom: 0px solid rgba(0, 0, 0, .12) !important;
+}
+
+.mat-tab-labels {
+  background: #fff !important;
+  font-weight: bold !important;
+  color: #000 !important;
+}
+
+.mat-tab-label.mat-tab-label-content {
+  font-weight: bold !important;
+  color: #000 !important;
+}
+
+.ag-row .mat-icon {
+  color: #253d97;
+  margin-top: 5px;
+  margin-right: 5px;
+  font-size: 22px;
+}
+
+.ag-theme-material .ag-row-selected {
+  background: #d7edfb !important;
+}
+
+.ag-row i {
+  color: #253d97;
+  margin-top: 5px;
+  margin-right: 5px;
+  font-size: 22px;
+}
+
+.mat-tab-label,
+.mat-tab-link {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+.gridwrapper {
+  width: 100%;
+  height: 600px;
+  float: left;
+  padding-bottom: 50px;
+}
+
+app-sheets {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  min-height: 450px;
+}
+
+app-bordereau {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  min-height: 450px;
+}
+
+app-import-wizard-stepper {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 97%;
+  min-height: 450px;
+}
+
+.tower-grid-small {
+  min-height: 150px;
+  height: 150px;
+}
+
+.mat-horizontal-content-container {
+  overflow: hidden;
+  padding: 0 24px 5px 24px !important;
+}
+
+@media (min-width: 1366px) and (max-width: 1600px) {
+  .popupheight {
+    min-height: 540px;
+    display: block;
+  }
+  .tower-grid {
+    height: 100% !important;
+  }
+}
+
+@media (min-width: 1650px) and (max-width: 1920px) {
+  .popupheight {
+    min-height: 690px;
+    display: block;
+  }
+  .tower-grid {
+    height: 100% !important;
+  }
+}
