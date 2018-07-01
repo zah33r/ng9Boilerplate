@@ -1,6 +1,31 @@
 # Angular Material 6
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
+
+- Before getting started, install node: 8.11.3 (https://nodejs.org/en/download/)
+- update npm @ 6.1.0 to be compatible with angular cli for angular 6
+
+check existing version of npm
+```sh
+$ npm -v
+5.6.0
+```
+
+update npm to latest version
+```sh
+$ npm install -g npm@latest
+
+$ npm -v
+6.1.0
+```
+
+Install correct version of packages by using below command at the root of the project
+```sh
+$ npm ci
+```
+More about npm-ci here: https://docs.npmjs.com/cli/ci
+
+
 The project provides boilerplate application structure for getting started with below items:
 - Angular 6
 - Angular Material 6
