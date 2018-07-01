@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
     routes: AppRouterLink[] = [];
-    title = 'BMS';
+    title = 'Angular';
 
     ngOnInit(): void {
         this.loadRoutes();
