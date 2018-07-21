@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { BaseHttpService } from '../services/BaseHttpService';
+import { environment } from '../environments/environment';
+import { AppConfig } from '../constants/app-config';
+import { Observable } from '../../node_modules/rxjs/Observable';
 
 @Component({
     selector: 'app-root',
@@ -8,9 +12,38 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
     routes: AppRouterLink[] = [];
     title = 'Angular';
+    configLoaded: boolean = false;
+    appConfigPath: string = '/assets/appConfig.json';
+
+    constructor(private http: BaseHttpService) {}
 
     ngOnInit(): void {
-        this.loadRoutes();
+        this.loadRuntimeDependencies();
+    }
+
+    private loadRuntimeDependencies() {
+        setTimeout(() => {
+            this.http
+                .getData(this.appConfigPath)
+                .catch(this.configMissingErrorHandler.bind(this))
+                .subscribe((config: JSON) => {
+                    this.overrideStaticConfigurations(config);
+                    this.configLoaded = true;
+                });
+        }, 5000);
+    }
+
+    private configMissingErrorHandler(error: Response | any) {
+        console.warn(AppConfig.InfoMessage_RunTimeConfigs);
+        this.configLoaded = true;
+        console.log(environment);
+        return Observable.create();
+    }
+
+    private overrideStaticConfigurations(configObject: JSON) {
+        environment.appRoot = configObject['appRoot'];
+        environment.production = configObject['production'];
+        console.log(environment);
     }
 
     loadRoutes(): void {

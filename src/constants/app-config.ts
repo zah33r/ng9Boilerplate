@@ -14,4 +14,6 @@ export class AppConfig {
     public static URL_BmsValidateData: string = AppConfig.URL_BmsBase + 'getvalidations/';
     public static URL_BmsBeginNameMatch: string = AppConfig.URL_BmsBase + 'beginnamematch';
     public static URL_BmsGetNameMatchResults: string = AppConfig.URL_BmsBase + 'GetNameMatchResults';
+
+    public static InfoMessage_RunTimeConfigs = 'runtime configurations not found, using compile time configurations';
 }

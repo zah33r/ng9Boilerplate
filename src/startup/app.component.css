@@ -12,3 +12,8 @@
 .navItems {
   text-align: center;
 }
+
+.loading-bar {
+  width: 100%;
+  text-align: center;
+}

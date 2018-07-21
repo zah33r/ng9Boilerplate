@@ -1,0 +1,4 @@
+{
+  "production": true,
+  "appRoot": "http://localhost:12345/"
+}
