@@ -1,4 +1,5 @@
 export const environment = {
     production: true,
-    appRoot: ''
+    appRoot: '',
+    version: require('../../package.json').version
 };

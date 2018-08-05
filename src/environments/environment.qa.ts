@@ -5,5 +5,6 @@
 
 export const environment = {
     production: false,
-    appRoot: 'https://localhost:9000/QAAPI/BmsAPI/'
+    appRoot: 'https://localhost:9000/QAAPI/BmsAPI/',
+    version: require('../../package.json').version
 };

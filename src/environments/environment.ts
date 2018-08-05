@@ -5,5 +5,6 @@
 
 export const environment = {
     production: false,
-    appRoot: 'http://localhost:60123/'
+    appRoot: 'http://localhost:60123/',
+    version: require('../../package.json').version
 };
