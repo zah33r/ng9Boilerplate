@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppConfig } from '../constants/app-config';
 
 @Component({
     selector: 'app-root',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
     routes: AppRouterLink[] = [];
     title = 'Angular';
+    version = AppConfig.AppVersion;
 
     ngOnInit(): void {
         this.loadRoutes();
