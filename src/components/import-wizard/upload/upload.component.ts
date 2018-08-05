@@ -70,10 +70,10 @@ export class UploadComponent implements OnInit {
 
     uploadFile() {
         this.FileUploadComponent.processFiles()
-            .catch((error: Response | any) => {
-                console.error(error.message || error);
-                return Observable.throw(error.message || error);
-            })
+            // .catch((error: Response | any) => {
+            //     console.error(error.message || error);
+            //     return Observable.throw(error.message || error);
+            // })
             .subscribe((res: FileInfoModel) => {
                 this.FileUploadComponent.uploadStatus = 'File uploaded successfully.';
                 this.FileUploadComponent.uploader.clearQueue();

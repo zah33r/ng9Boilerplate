@@ -2,13 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { MockData } from '../../constants/mock-data';
 import { MatDialog } from '@angular/material';
 import { DashboardService } from './dashboard.service';
+import { NgbTooltipConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'app-dashboard',
     templateUrl: './dashboard.component.html',
-    styleUrls: ['./dashboard.component.css']
+    styleUrls: ['./dashboard.component.css'],
+    providers: [NgbTooltipConfig]
 })
 export class DashboardComponent implements OnInit {
+    name: string = 'bootstrap-test';
     selectedTabIndex: number | null = 0;
     bxViewcolumnDefs = MockData.agGridColumnDefs_homeScreen;
     bxViewrowData = MockData.agGridRowDefs_homeScreen;
@@ -21,7 +24,10 @@ export class DashboardComponent implements OnInit {
         disableClose: true
     };
 
-    constructor(public dialog: MatDialog, public dashboardService: DashboardService) {}
+    constructor(config: NgbTooltipConfig, public dialog: MatDialog, public dashboardService: DashboardService) {
+        config.placement = 'bottom';
+        config.triggers = 'click';
+    }
 
     ngOnInit() {
         this.getWfGridData();

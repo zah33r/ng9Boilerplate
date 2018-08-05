@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
         setTimeout(() => {
             this.http
                 .getData(this.appConfigPath)
-                .catch(this.configMissingErrorHandler.bind(this))
+                // .pipe(catchError(this.configMissingErrorHandler.bind(this)))
                 .subscribe((config: JSON) => {
                     this.overrideStaticConfigurations(config);
                     this.configLoaded = true;
