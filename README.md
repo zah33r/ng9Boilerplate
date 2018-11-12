@@ -1,4 +1,10 @@
-# Angular Material 6
+# Angular Material 6/7
+
+# New!
+> Get the latest version (angular 7/material 7) from branch on the link below
+> https://github.com/zah33r/ng6Boilerplate/tree/v7
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
 
