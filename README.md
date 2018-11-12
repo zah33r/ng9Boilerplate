@@ -2,8 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
 
-- Before getting started, install node: 8.11.3 (https://nodejs.org/en/download/)
-- update npm @ 6.1.0 to be compatible with angular cli for angular 6
+- Before getting started, install node: 8.11.3 or greater (https://nodejs.org/en/download/)
+- update npm @ 6.1.0 or greater to be compatible with angular cli for angular 7
 
 check existing version of npm
 ```sh
