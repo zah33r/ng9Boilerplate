@@ -1,4 +1,4 @@
-# Angular Material 6
+# Angular Material 7
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
 
@@ -27,8 +27,8 @@ More about npm-ci here: https://docs.npmjs.com/cli/ci
 
 
 The project provides boilerplate application structure for getting started with below items:
-- Angular 6
-- Angular Material 6
+- Angular 7
+- Angular Material 7
 - Angular Flex
 - Angular Router
 - Angular Http Services
