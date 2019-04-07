@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, TemplateRef, ViewContainerRef, OnDestroy, AfterViewInit } from '@angular/core';
 import { BordereauService } from './bordereau.service';
 import { Bordereau } from './bordereau.model';
 import { Observable } from 'rxjs';
@@ -9,13 +9,19 @@ import { MatChipInputEvent } from '@angular/material/chips';
 import { FormGroup, FormControl, Validators, FormGroupDirective, NgForm } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { BordereauFileStatus } from './enums/bordereau-file-status.enum';
+import { OverlayRef, Overlay } from '@angular/cdk/overlay';
+import { TemplatePortal } from '@angular/cdk/portal';
 
 @Component({
     selector: 'app-bordereau',
     templateUrl: './bordereau.component.html',
     styleUrls: ['./bordereau.component.css']
 })
-export class BordereauComponent implements OnInit {
+export class BordereauComponent implements OnInit, AfterViewInit, OnDestroy {
+    @ViewChild(TemplateRef) _dialogTemplate: TemplateRef<any>;
+    private _overlayRef: OverlayRef;
+    private _portal: TemplatePortal;
+
     selectedFrequent: string;
     selectedBordereauType: string;
     selectedLOB = '';
@@ -51,7 +57,7 @@ export class BordereauComponent implements OnInit {
     fcCedingCompany: FormControl;
     fcComments: FormControl;
 
-    constructor(private bordereauService: BordereauService) {}
+    constructor(private bordereauService: BordereauService, private _overlay: Overlay, private _viewContainerRef: ViewContainerRef) {}
 
     ngOnInit() {
         this.separatorKeysCodes = [this.ENTER, this.COMMA];
@@ -126,6 +132,27 @@ export class BordereauComponent implements OnInit {
         if (index >= 0) {
             this.tirsList.splice(index, 1);
         }
+    }
+
+    ngAfterViewInit() {
+        this._portal = new TemplatePortal(this._dialogTemplate, this._viewContainerRef);
+        this._overlayRef = this._overlay.create({
+            positionStrategy: this._overlay
+                .position()
+                .global()
+                .centerHorizontally()
+                .centerVertically(),
+            hasBackdrop: true
+        });
+        this._overlayRef.backdropClick().subscribe(() => this._overlayRef.detach());
+    }
+
+    ngOnDestroy() {
+        this._overlayRef.dispose();
+    }
+
+    openDialog() {
+        this._overlayRef.attach(this._portal);
     }
 }
 

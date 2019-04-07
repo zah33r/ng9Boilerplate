@@ -1,14 +1,18 @@
-<div style="background-color: white">
+<div style="background-color: white" cdkDrag cdkDragRootElement=".cdk-overlay-pane">
+
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--3-col">
+      <button mat-stroked-button [mat-dialog-close]="'asdasd'">Close</button>
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Bordereau Name" [formControl]="fcName" required [errorStateMatcher]="matcher" [(ngModel)]="bordereauModel.Name">
+        <input matInput placeholder="Bordereau Name" [formControl]="fcName" required [errorStateMatcher]="matcher"
+          [(ngModel)]="bordereauModel.Name">
         <mat-error *ngIf="fcName.invalid">{{getErrorMessage(fcName)}}</mat-error>
       </mat-form-field>
     </div>
     <div class="mdl-cell mdl-cell--3-col">
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Underwriter" [formControl]="fcUnderwriter" required [errorStateMatcher]="matcher" [(ngModel)]="bordereauModel.Underwriter">
+        <input matInput placeholder="Underwriter" [formControl]="fcUnderwriter" required [errorStateMatcher]="matcher"
+          [(ngModel)]="bordereauModel.Underwriter">
         <mat-error *ngIf="fcUnderwriter.invalid">{{getErrorMessage(fcUnderwriter)}}</mat-error>
       </mat-form-field>
     </div>
@@ -31,8 +35,8 @@
   </div>
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--3-col selectgridpadding">
-      <mat-select class="selectstyles" placeholder="Select LOB" [formControl]="fcLob" required [errorStateMatcher]="matcher" [(ngModel)]="bordereauModel.LOB"
-        name="lob">
+      <mat-select class="selectstyles" placeholder="Select LOB" [formControl]="fcLob" required [errorStateMatcher]="matcher"
+        [(ngModel)]="bordereauModel.LOB" name="lob">
         <mat-option *ngFor="let lob of lobs" [value]="lob.value">
           {{lob.viewValue}}
         </mat-option>
@@ -40,8 +44,8 @@
       <mat-error *ngIf="fcLob.invalid">{{getErrorMessage(fcLob)}}</mat-error>
     </div>
     <div class="mdl-cell mdl-cell--3-col selectgridpadding mL25">
-      <mat-select class="selectstyles" placeholder="Ceding Company" [formControl]="fcCedingCompany" required [errorStateMatcher]="matcher"
-        [(ngModel)]="bordereauModel.CedingCompany" name="cedingCompany">
+      <mat-select class="selectstyles" placeholder="Ceding Company" [formControl]="fcCedingCompany" required
+        [errorStateMatcher]="matcher" [(ngModel)]="bordereauModel.CedingCompany" name="cedingCompany">
         <mat-option *ngFor="let company of cedingCompanies" [value]="company.value">
           {{company.viewValue}}
         </mat-option>
@@ -52,7 +56,8 @@
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--12-col clear fLeft">
       <mat-form-field class="example-full-width">
-        <textarea matInput placeholder="Comments" rows="5" [formControl]="fcComments" required [errorStateMatcher]="matcher" [(ngModel)]="bordereauModel.Comments"></textarea>
+        <textarea matInput placeholder="Comments" rows="5" [formControl]="fcComments" required [errorStateMatcher]="matcher"
+          [(ngModel)]="bordereauModel.Comments"></textarea>
         <mat-error *ngIf="fcComments.invalid">{{getErrorMessage(fcComments)}}</mat-error>
       </mat-form-field>
     </div>

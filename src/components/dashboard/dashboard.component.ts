@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MockData } from '../../constants/mock-data';
 import { MatDialog } from '@angular/material';
 import { DashboardService } from './dashboard.service';
+import { BordereauComponent } from '../import-wizard/bordereau/bordereau.component';
 
 @Component({
     selector: 'app-dashboard',
@@ -31,7 +32,9 @@ export class DashboardComponent implements OnInit {
         this.openDialog();
     }
 
-    openDialog() {}
+    openDialog() {
+        this.dialog.open(BordereauComponent, this.dialogConfiguration);
+    }
 
     getWfGridData() {
         const colDef: any[] = MockData.agGridColumnDefs_WF;
