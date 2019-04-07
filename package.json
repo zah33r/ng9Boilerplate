@@ -1,11 +1,13 @@
 {
-  "name": "ng-material-6-template",
+  "name": "ng-material-7-template",
   "version": "1.0.0",
   "license": "zah33r (c) 2018",
+  "homepage": "https://github.com/zah33r/ng7Boilerplate",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "restart": "npm restart",
+    "prod-azure": "ng build --prod --aot --output-path \".\\dist\\prod\" --base-href=/",
     "prod-build": "ng build --prod --aot --output-path \".\\dist\\prod\" --base-href=/Bms/",
     "qa-build": "ng build --configuration=qa --output-path \".\\dist\\qa\" --base-href=/BmsQA/",
     "uat-build": "ng build --configuration=uat --output-path \".\\dist\\uat\" --base-href=/BmsUAT/",
