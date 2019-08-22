@@ -1,9 +1,9 @@
-# Angular Material 7
+# Angular Material 8
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
 
-- Before getting started, install node: 8.11.3 or greater (https://nodejs.org/en/download/)
-- update npm @ 6.1.0 or greater to be compatible with angular cli for angular 7
+- Before getting started, install node: 10.16.3 or greater (https://nodejs.org/en/download/)
+- update npm @ 6.1.0 or greater to be compatible with angular cli for angular 8
 
 check existing version of npm
 ```sh
@@ -27,8 +27,8 @@ More about npm-ci here: https://docs.npmjs.com/cli/ci
 
 
 The project provides boilerplate application structure for getting started with below items:
-- Angular 7
-- Angular Material 7
+- Angular 8
+- Angular Material 8
 - Angular Flex
 - Angular Router
 - Angular Http Services
