@@ -58,7 +58,7 @@ export class AgGridCellSelectEditor implements ICellEditorAngularComp, AfterView
     lookupValue: any = '';
     private params: any;
 
-    @ViewChild('container', { read: ViewContainerRef })
+    @ViewChild('container', { read: ViewContainerRef, static: true })
     public container;
 
     constructor(private appSharedService: AppSharedService) {}

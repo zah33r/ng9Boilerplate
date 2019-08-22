@@ -30,7 +30,7 @@ export class UploadComponent implements OnInit {
     data: any;
     formData: FileUploadFormModel[];
     @Output() fileUploadComplete = new EventEmitter<FileInfoModel>();
-    @ViewChild(FileUploadComponent) FileUploadComponent: FileUploadComponent;
+    @ViewChild(FileUploadComponent, { static: true }) FileUploadComponent: FileUploadComponent;
     @Input() uri: string;
     fileInfo: FileInfoModel;
     tirsList: any[] = [];
