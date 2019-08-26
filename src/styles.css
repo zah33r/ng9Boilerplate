@@ -2,6 +2,7 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import '~ag-grid-community/dist/styles/ag-grid.css';
 @import '~ag-grid-community/dist/styles/ag-theme-balham.css';
+@import '~ag-grid-community/dist/styles/ag-theme-material.css';
 html,
 body {
     margin: 0;
