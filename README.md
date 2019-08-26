@@ -34,7 +34,7 @@ The project provides boilerplate application structure for getting started with 
 - Angular Http Services
 - Angular Guard
 - Angular Shared Service
-- AgGrid 17
+- AgGrid 21
 - AgGrid Cell Renderer
 - Angular Material Reactive Form Validators
 - Multiple Environment Builds - DEV | QA | UAT | PROD
