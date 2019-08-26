@@ -24,6 +24,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatChipsModule, MAT_CHIPS_DEFAULT_OPTIONS } from '@angular/material/chips';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const ENTER: number = 13;
 const COMMA: number = 44;
@@ -53,7 +54,8 @@ const COMMA: number = 44;
         MatGridListModule,
         MatExpansionModule,
         MatTabsModule,
-        MatChipsModule
+        MatChipsModule,
+        MatProgressSpinnerModule
     ],
     exports: [
         MatButtonModule,
@@ -76,7 +78,8 @@ const COMMA: number = 44;
         MatGridListModule,
         MatExpansionModule,
         MatTabsModule,
-        MatChipsModule
+        MatChipsModule,
+        MatProgressSpinnerModule
     ],
     providers: [
         MatNativeDateModule,

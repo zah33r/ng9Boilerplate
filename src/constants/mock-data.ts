@@ -874,7 +874,7 @@ export class MockData {
     ];
 
     static agGridColumnDefs_WF: any[] = [
-        { field: 'Action', cellRenderer: 'BordereauActionsRenderer' },
+        // { field: 'Action', cellRenderer: 'BordereauActionsRenderer' },
         { field: 'ProcessStatus' },
         { field: 'LOB' },
         { field: 'Underwriter' },
