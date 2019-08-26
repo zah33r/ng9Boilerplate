@@ -1,0 +1,8 @@
+.overlay-boundary {
+  background-color: #eeeeee;
+  height: 15%
+}
+
+.loading-spinner {
+  z-index: 999;
+}
