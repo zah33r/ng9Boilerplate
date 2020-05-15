@@ -1,5 +1,5 @@
 export class MockData {
-    static agGridColumnDefs_EdaTower: any[] = [
+    static agGridColumnDefs_webapp: any[] = [
         {
             headerName: '',
             field: '#',
@@ -103,7 +103,7 @@ export class MockData {
         }
     ];
 
-    static agGridRowData_EdaTower: any[] = [
+    static agGridRowData_webapp: any[] = [
         {
             id: 36,
             insuredName: 'Microsoft Corporation',

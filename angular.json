@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "edatower": {
+        "webapp": {
             "root": "",
             "sourceRoot": "src",
             "projectType": "application",
@@ -68,24 +68,24 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "edatower:build"
+                        "browserTarget": "webapp:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "edatower:build:production"
+                            "browserTarget": "webapp:build:production"
                         },
                         "qa": {
-                            "browserTarget": "edatower:build:qa"
+                            "browserTarget": "webapp:build:qa"
                         },
                         "uat": {
-                            "browserTarget": "edatower:build:uat"
+                            "browserTarget": "webapp:build:uat"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "edatower:build"
+                        "browserTarget": "webapp:build"
                     }
                 },
                 "test": {
@@ -115,7 +115,7 @@
                 }
             }
         },
-        "edatower-e2e": {
+        "webapp-e2e": {
             "root": "",
             "sourceRoot": "",
             "projectType": "application",
@@ -124,7 +124,7 @@
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
                         "protractorConfig": "./protractor.conf.js",
-                        "devServerTarget": "edatower:serve"
+                        "devServerTarget": "webapp:serve"
                     }
                 },
                 "lint": {
@@ -137,7 +137,7 @@
             }
         }
     },
-    "defaultProject": "edatower",
+    "defaultProject": "webapp",
     "schematics": {
         "@schematics/angular:component": {
             "prefix": "app",
