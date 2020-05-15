@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MockData } from '../../constants/mock-data';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { DashboardService } from './dashboard.service';
 
 @Component({
