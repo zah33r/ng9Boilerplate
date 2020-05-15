@@ -1,9 +1,9 @@
-# Angular Material 8
+# Angular Material 9
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
 
-- Before getting started, install node: 10.16.3 or greater (https://nodejs.org/en/download/)
-- update npm @ 6.1.0 or greater to be compatible with angular cli for angular 8
+- Before getting started, install node: v14.2.0 or greater (https://nodejs.org/en/download/)
+- update npm @ 6.14.4 or greater to be compatible with angular cli for angular 9
 
 check existing version of npm
 ```sh
@@ -16,7 +16,7 @@ update npm to latest version
 $ npm install -g npm@latest
 
 $ npm -v
-6.1.0
+6.14.4
 ```
 
 Install correct version of packages by using below command at the root of the project
@@ -27,19 +27,20 @@ More about npm-ci here: https://docs.npmjs.com/cli/ci
 
 
 The project provides boilerplate application structure for getting started with below items:
-- Angular 8
-- Angular Material 8
+- Angular 9
+- Angular Material 9
+- Angular CDK
 - Angular Flex
 - Angular Router
 - Angular Http Services
 - Angular Guard
 - Angular Shared Service
-- AgGrid 21
-- AgGrid Cell Renderer
-- Angular Material Reactive Form Validators
+- AgGrid 23
+- AgGrid Cell Renderer Sample
+- Angular Material Reactive Form Validators Sample
 - Multiple Environment Builds - DEV | QA | UAT | PROD
 - Pre-setup Web.Config for IIS Routes
-- File Uploading Component
+- File Uploading Component Sample
 
 ## Development server
 
@@ -48,6 +49,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component.
+
 You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
