@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CacheService } from '../modules/cache/cache.service';
+import { StorageType } from '../modules/cache/storages/storage-type.enum';
 
 @Component({
     selector: 'app-root',
@@ -11,6 +13,10 @@ export class AppComponent implements OnInit {
 
     ngOnInit(): void {
         this.loadRoutes();
+    }
+
+    constructor(private cacheService:CacheService){
+      this.cacheService.saveData('test', 'test', StorageType.sessionStorage);
     }
 
     loadRoutes(): void {

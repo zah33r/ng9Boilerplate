@@ -22,6 +22,7 @@ import { NameMatchingComponent } from '../components/name-matching/name-matching
 import { AgGridCellSelectEditor } from '../components/base/ag-grid-base/ag-grid-components/select-list.editor';
 import { AgGridCellSelectRenderer } from '../components/base/ag-grid-base/ag-grid-components/select-list.renderer';
 import { BordereauActionsRenderer } from '../components/base/ag-grid-base/ag-grid-components/bordereau-action.renderer';
+import { CacheModule } from '../modules/cache/cache.module';
 
 @NgModule({
     declarations: [
@@ -40,7 +41,7 @@ import { BordereauActionsRenderer } from '../components/base/ag-grid-base/ag-gri
         AgGridCellSelectRenderer,
         BordereauActionsRenderer
     ],
-    imports: [BrowserModule, HttpClientModule, AppRoutingModule, AppMaterialModule, AppAgGridModule, FileUploadModule, FlexLayoutModule],
+    imports: [BrowserModule, HttpClientModule, AppRoutingModule, AppMaterialModule, AppAgGridModule, FileUploadModule, FlexLayoutModule, CacheModule],
     providers: [BaseHttpService, AppSharedService, HttpClientModule],
     entryComponents: [AgGridCellSelectEditor, AgGridCellSelectRenderer, BordereauActionsRenderer, UploadComponent],
     bootstrap: [AppComponent]
