@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { LocalStorage } from './storages/local-storage';
+import { LocalStorage } from './storages/local-storage/local-storage';
 import { StorageType } from './storages/storage-type.enum';
-import { SessionStorage } from './storages/session-storage';
-import { IndexDbStorage } from './storages/index-db-storage';
+import { SessionStorage } from './storages/session-storage/session-storage';
+import { IndexDbStorage } from './storages/index-db/index-db-storage';
 
 @Injectable({
     providedIn: 'root',

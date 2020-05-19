@@ -4,7 +4,7 @@
     "newProjectRoot": "projects",
     "projects": {
         "webapp": {
-            "root": "",
+            "root": "./",
             "sourceRoot": "src",
             "projectType": "application",
             "architect": {
@@ -116,7 +116,7 @@
             }
         },
         "webapp-e2e": {
-            "root": "",
+            "root": "./e2e",
             "sourceRoot": "",
             "projectType": "application",
             "architect": {

@@ -1,28 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from '../modules/app-routing/app-routing.module';
-import { DashboardComponent } from '../components/dashboard/dashboard.component';
+import { RoutingModule } from '../modules/routing/routing.module';
 import { AppMaterialModule } from '../modules/app-material/app-material.module';
-import { AppAgGridModule } from '../modules/app-ag-grid/app-ag-grid.module';
-import { BaseHttpService } from '../services/BaseHttpService';
-import { AppSharedService } from '../services/app-shared/app-shared.service';
-import { AgGridBaseComponent } from '../components/base/ag-grid-base/ag-grid-base.component';
-import { UploadComponent } from '../components/import-wizard/upload/upload.component';
-import { HeaderComponent } from '../components/header/header.component';
-import { ToolbarComponent } from '../components/toolbar/toolbar.component';
-import { FileUploadComponent } from '../components/base/file-upload/file-upload.component';
+import { AppAgGridModule } from '../modules/base/components/app-ag-grid/app-ag-grid.module';
+import { BaseHttpService } from '../modules/http/BaseHttpService';
+import { AgGridBaseComponent } from '../modules/base/components/app-ag-grid/ag-grid-base/ag-grid-base.component';
+import { FileUploadComponent } from '../modules/base/components/file-upload/file-upload.component';
 import { FileUploadModule } from 'ng2-file-upload';
 import { HttpClientModule } from '@angular/common/http';
-import { ImportDirective } from '../directives/import-wizard/import.directive';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { LoginComponent } from '../components/login/login.component';
-import { BordereauComponent } from '../components/import-wizard/bordereau/bordereau.component';
-import { NameMatchingComponent } from '../components/name-matching/name-matching.component';
-import { AgGridCellSelectEditor } from '../components/base/ag-grid-base/ag-grid-components/select-list.editor';
-import { AgGridCellSelectRenderer } from '../components/base/ag-grid-base/ag-grid-components/select-list.renderer';
-import { BordereauActionsRenderer } from '../components/base/ag-grid-base/ag-grid-components/bordereau-action.renderer';
+import { AgGridCellSelectEditor } from '../modules/base/components/app-ag-grid/ag-grid-framework-components/select-list.editor';
+import { AgGridCellSelectRenderer } from '../modules/base/components/app-ag-grid/ag-grid-framework-components/select-list.renderer';
+import { BordereauActionsRenderer } from '../modules/base/components/app-ag-grid/ag-grid-framework-components/bordereau-action.renderer';
 import { CacheModule } from '../modules/cache/cache.module';
+import { DashboardComponent } from '../modules/feature/dashboard/dashboard.component';
+import { UploadComponent } from '../modules/feature/import-wizard/upload/upload.component';
+import { ToolbarComponent } from '../modules/feature/toolbar/toolbar.component';
+import { LoginComponent } from '../modules/feature/login/login.component';
+import { BordereauComponent } from '../modules/feature/import-wizard/bordereau/bordereau.component';
+import { NameMatchingComponent } from '../modules/feature/name-matching/name-matching.component';
+import { HeaderComponent } from '../modules/feature/header/header.component';
+import { SharedService } from '../modules/shared/shared.service';
 
 @NgModule({
     declarations: [
@@ -33,17 +32,16 @@ import { CacheModule } from '../modules/cache/cache.module';
         HeaderComponent,
         ToolbarComponent,
         FileUploadComponent,
-        ImportDirective,
         LoginComponent,
         BordereauComponent,
         NameMatchingComponent,
         AgGridCellSelectEditor,
         AgGridCellSelectRenderer,
-        BordereauActionsRenderer
+        BordereauActionsRenderer,
     ],
-    imports: [BrowserModule, HttpClientModule, AppRoutingModule, AppMaterialModule, AppAgGridModule, FileUploadModule, FlexLayoutModule, CacheModule],
-    providers: [BaseHttpService, AppSharedService, HttpClientModule],
+    imports: [BrowserModule, HttpClientModule, RoutingModule, AppMaterialModule, AppAgGridModule, FileUploadModule, FlexLayoutModule, CacheModule],
+    providers: [BaseHttpService, SharedService, HttpClientModule],
     entryComponents: [AgGridCellSelectEditor, AgGridCellSelectRenderer, BordereauActionsRenderer, UploadComponent],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
 export class AppModule {}
