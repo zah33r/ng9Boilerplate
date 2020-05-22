@@ -25,6 +25,9 @@ export class DashboardComponent implements OnInit {
 
     ngOnInit() {
         this.getWfGridData();
+        this.dashboardService.getBordereaus().subscribe( (res) => {
+          console.log(res);
+        });
     }
 
     onAddTowerClick($event: any) {
