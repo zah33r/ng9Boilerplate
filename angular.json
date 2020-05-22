@@ -97,11 +97,7 @@
                         "tsConfig": "src/tsconfig.spec.json",
                         "scripts": [],
                         "styles": [
-                            "src/styles.css",
-                            "node_modules/ag-grid/dist/styles/ag-grid.css",
-                            "node_modules/ag-grid/dist/styles/ag-theme-fresh.css",
-                            "node_modules/ag-grid/dist/styles/ag-theme-blue.css",
-                            "node_modules/ag-grid/dist/styles/ag-theme-material.css"
+                            "src/styles.css"
                         ],
                         "assets": ["src/assets", "src/favicon.ico"]
                     }
