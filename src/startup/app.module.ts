@@ -26,7 +26,6 @@ import { CoreModule } from '../modules/core/core.module';
 @NgModule({
     declarations: [
         AppComponent,
-        AgGridBaseComponent,
         DashboardComponent,
         UploadComponent,
         HeaderComponent,
@@ -35,12 +34,10 @@ import { CoreModule } from '../modules/core/core.module';
         LoginComponent,
         BordereauComponent,
         NameMatchingComponent,
-        AgGridCellSelectEditor,
-        AgGridCellSelectRenderer,
         BordereauActionsRenderer,
     ],
     imports: [CoreModule, RoutingModule, AppMaterialModule, AppAgGridModule, FileUploadModule, FlexLayoutModule, CacheModule, HttpModule],
-    entryComponents: [AgGridCellSelectEditor, AgGridCellSelectRenderer, BordereauActionsRenderer, UploadComponent],
+    entryComponents: [BordereauActionsRenderer, UploadComponent],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

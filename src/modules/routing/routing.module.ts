@@ -12,7 +12,7 @@ import { OKTA_CONFIG, OktaAuthModule } from '@okta/okta-angular';
 import { environment } from '../../environments/environment';
 
 const CALLBACK_PATH = 'implicit/callback';
-const config = {
+const oktaConfig = {
     clientId: environment.okta.ClientId,
     issuer: environment.okta.Issuer,
     redirectUri: environment.okta.RedirectUri,
@@ -39,6 +39,6 @@ const routes: Routes = [
 @NgModule({
     imports: [CommonModule, OktaAuthModule, RouterModule.forRoot(routes)],
     exports: [RouterModule],
-    providers: [{ provide: OKTA_CONFIG, useValue: config }],
+    providers: [{ provide: OKTA_CONFIG, useValue: oktaConfig }],
 })
 export class RoutingModule {}
