@@ -8,6 +8,7 @@ export class HttpClientInterceptor implements HttpInterceptor {
         const secureReq = req.clone({
             url: req.url.replace('http://', 'https://'),
         });
+        console.info('interceptor invoked!');
         return next.handle(secureReq);
     }
 }

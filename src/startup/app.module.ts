@@ -21,6 +21,7 @@ import { BordereauComponent } from '../modules/feature/import-wizard/bordereau/b
 import { NameMatchingComponent } from '../modules/feature/name-matching/name-matching.component';
 import { HeaderComponent } from '../modules/feature/header/header.component';
 import { HttpModule } from '../modules/http/http.module';
+import { CoreModule } from '../modules/core/core.module';
 
 @NgModule({
     declarations: [
@@ -38,7 +39,7 @@ import { HttpModule } from '../modules/http/http.module';
         AgGridCellSelectRenderer,
         BordereauActionsRenderer,
     ],
-    imports: [BrowserModule, HttpClientModule, RoutingModule, AppMaterialModule, AppAgGridModule, FileUploadModule, FlexLayoutModule, CacheModule, HttpModule],
+    imports: [CoreModule, RoutingModule, AppMaterialModule, AppAgGridModule, FileUploadModule, FlexLayoutModule, CacheModule, HttpModule],
     entryComponents: [AgGridCellSelectEditor, AgGridCellSelectRenderer, BordereauActionsRenderer, UploadComponent],
     bootstrap: [AppComponent],
 })
