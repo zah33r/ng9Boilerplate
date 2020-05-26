@@ -1,7 +1,13 @@
-import { HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
+import { HttpInterceptor, HttpHandler, HttpRequest, HttpEvent } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import { Injectable } from '@angular/core';
 
+@Injectable({ providedIn: 'root' })
 export class HttpClientInterceptor implements HttpInterceptor {
-    intercept(req: HttpRequest<any>, next: HttpHandler): any {
-        throw new Error('Method not implemented.');
+    intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+        const secureReq = req.clone({
+            url: req.url.replace('http://', 'https://'),
+        });
+        return next.handle(secureReq);
     }
 }
