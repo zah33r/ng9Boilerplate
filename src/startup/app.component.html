@@ -1,5 +1,5 @@
 <app-header (onMenuClick)="sidenav.toggle()"></app-header>
-<app-toolbar [componentToolbar]="'dashboard'" (onAddTowerClick)="onAddTowerClick($event)"></app-toolbar>
+<app-toolbar [componentToolbar]="'dashboard'"></app-toolbar>
 <mat-sidenav-container class="example-container">
     <mat-sidenav #sidenav mode="push" class="sideNavTheme">
         <div class="navItems" *ngFor="let route of routes">
