@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ICellRendererAngularComp } from 'ag-grid-angular';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { Bordereau } from '../../../../feature/import-wizard/bordereau/bordereau.model';
+// import { Bordereau } from '../../../../feature/import-wizard/bordereau/bordereau.model';
 import { SharedService } from '../../../../shared/shared.service';
 
 @Component({
@@ -26,7 +26,7 @@ import { SharedService } from '../../../../shared/shared.service';
 })
 export class BordereauActionsRenderer implements ICellRendererAngularComp {
     public params: any;
-    bordereauModel: Bordereau;
+    bordereauModel: any;
     dialogConfiguration = {
         width: '2000px',
         height: '900px',
@@ -38,7 +38,7 @@ export class BordereauActionsRenderer implements ICellRendererAngularComp {
 
     agInit(params: any): void {
         this.params = params;
-        this.bordereauModel = this.params.data as Bordereau;
+        this.bordereauModel = this.params.data as any;
     }
 
     refresh(): boolean {
@@ -58,7 +58,7 @@ export class BordereauActionsRenderer implements ICellRendererAngularComp {
 
     showNameMatching($event: any) {
         console.log($event);
-        this.appSharedService.bordereauModel = this.bordereauModel;
+        // this.appSharedService.bordereauModel = this.bordereauModel;
         this.router.navigate(['/name-matching']);
     }
 }

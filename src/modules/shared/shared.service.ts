@@ -1,12 +1,10 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
-import { Bordereau } from '../feature/import-wizard/bordereau/bordereau.model';
 
 @Injectable({
     providedIn: 'root',
 })
 export class SharedService {
     @Output() agGridSelectEditorValueChange: EventEmitter<any> = new EventEmitter<any>();
-    bordereauModel = new Bordereau();
     globalFileId: string;
 
     constructor() {}
