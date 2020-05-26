@@ -6,9 +6,15 @@ import { environment } from './environments/environment';
 
 import 'hammerjs';
 
-if (environment.production) {
-  enableProdMode();
+import { TextEncoder } from 'text-encoding';
+if (typeof (window as any).TextEncoder === 'undefined') {
+    (window as any).TextEncoder = TextEncoder;
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+if (environment.production) {
+    enableProdMode();
+}
+
+platformBrowserDynamic()
+    .bootstrapModule(AppModule)
+    .catch((err) => console.log(err));

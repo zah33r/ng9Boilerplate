@@ -5,5 +5,16 @@
 
 export const environment = {
     production: false,
-    appRoot: 'http://localhost:3000/'
+    appRoot: 'http://localhost:3000/',
+    disableConsoleLogs: false,
+    disableOkta: false,
+    okta: {
+        Issuer: 'https://dev-456789.oktapreview.com/oauth2/default',
+        RedirectUri: 'http://localhost:4200/implicit/callback',
+        ClientId: '',
+        Pkce: true,
+        CurrentUser: 'https://dev-456789.oktapreview.com/api/v1/users/me',
+    },
+    agGridLicenseKey: '',
+    impersonateUser: 'mbarua',
 };

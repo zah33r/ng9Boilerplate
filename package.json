@@ -16,6 +16,7 @@
   },
   "private": true,
   "dependencies": {
+    "@okta/okta-angular": "^2.0.0",
     "ag-grid-angular": "^23.1.1",
     "ag-grid-community": "^23.1.1",
     "ag-grid-enterprise": "^23.1.1",
@@ -59,6 +60,7 @@
     "karma-jasmine": "^3.1.1",
     "karma-jasmine-html-reporter": "^1.5.4",
     "protractor": "^7.0.0",
+    "text-encoding": "^0.7.0",
     "ts-node": "^8.10.1",
     "tslint": "^6.1.2",
     "typescript": "^3.8.3"
