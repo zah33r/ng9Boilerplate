@@ -34,10 +34,9 @@ import { CoreModule } from '../modules/core/core.module';
         LoginComponent,
         BordereauComponent,
         NameMatchingComponent,
-        BordereauActionsRenderer,
     ],
     imports: [CoreModule, RoutingModule, AppMaterialModule, AppAgGridModule, FileUploadModule, FlexLayoutModule, CacheModule, HttpModule],
-    entryComponents: [BordereauActionsRenderer, UploadComponent],
+    entryComponents: [UploadComponent],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
