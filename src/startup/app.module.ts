@@ -9,10 +9,12 @@ import { ToolbarComponent } from '../modules/feature/toolbar/toolbar.component';
 import { HeaderComponent } from '../modules/feature/header/header.component';
 import { HttpModule } from '../modules/http/http.module';
 import { CoreModule } from '../modules/core/core.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
     declarations: [AppComponent, HeaderComponent, ToolbarComponent],
-    imports: [CoreModule, RoutingModule, AppMaterialModule, AppAgGridModule, FlexLayoutModule, CacheModule, HttpModule],
+    imports: [CoreModule, RoutingModule, AppMaterialModule, AppAgGridModule, FlexLayoutModule, CacheModule, HttpModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
     entryComponents: [],
     bootstrap: [AppComponent],
 })

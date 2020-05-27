@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class HttpClientInterceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         const secureReq = req.clone({
-            url: req.url.replace('http://', 'https://'),
+            // url: req.url.replace('http://', 'https://'),
         });
         console.info('interceptor invoked!');
         return next.handle(secureReq);
