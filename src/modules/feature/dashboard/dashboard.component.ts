@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DashboardService } from './dashboard.service';
 import { MockData } from '../../shared/constants/mock-data';
+import { SharedService } from '../../shared/shared.service';
 
 @Component({
     selector: 'app-dashboard',
     templateUrl: './dashboard.component.html',
-    styleUrls: ['./dashboard.component.css']
+    styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
     selectedTabIndex: number | null = 0;
@@ -18,20 +19,27 @@ export class DashboardComponent implements OnInit {
         width: '2000px',
         height: '900px',
         data: null,
-        disableClose: true
+        disableClose: true,
     };
 
-    constructor(public dialog: MatDialog, public dashboardService: DashboardService) {}
+    constructor(public dialog: MatDialog, public dashboardService: DashboardService, private sharedService: SharedService) {}
 
     ngOnInit() {
+        this.sharedService.getSubscriber('dashboard').subscribe((res) => {
+            console.log(res);
+        });
         this.getWfGridData();
-        this.dashboardService.getBordereaus().subscribe( (res) => {
-          console.log(res);
+        this.dashboardService.getBordereaus().subscribe((res) => {
+            console.log(res);
         });
     }
 
     onAddTowerClick($event: any) {
-        this.openDialog();
+        // this.openDialog();
+        this.sharedService.getSubscriber('dashboard').subscribe((res) => {
+            console.log(res);
+        });
+        this.sharedService.getSubscriber('dashboard').emit('firing event data');
     }
 
     openDialog() {}
@@ -39,7 +47,7 @@ export class DashboardComponent implements OnInit {
     getWfGridData() {
         const colDef: any[] = MockData.agGridColumnDefs_WF;
 
-        colDef.map(column => {
+        colDef.map((column) => {
             column.headerName = column.field;
         });
 

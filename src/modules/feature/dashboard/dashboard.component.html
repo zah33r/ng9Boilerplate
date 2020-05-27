@@ -1,4 +1,5 @@
 <!-- <app-toolbar [componentToolbar]="'dashboard'" (onAddTowerClick)="onAddTowerClick($event)"></app-toolbar> -->
+<button mat-button (click)="onAddTowerClick($event)">Basic</button>
 <mat-tab-group [(selectedIndex)]="selectedTabIndex">
   <mat-tab label="Simple Ag-Grid">
     <div style="height:800px" *ngIf="selectedTabIndex == 0">
