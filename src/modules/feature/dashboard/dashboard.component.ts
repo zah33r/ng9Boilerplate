@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DashboardService } from './dashboard.service';
 import { MockData } from '../../shared/constants/mock-data';
 import { SharedService } from '../../shared/shared.service';
+import { EventService } from '../../shared/event/event.service';
 
 @Component({
     selector: 'app-dashboard',
@@ -22,7 +23,7 @@ export class DashboardComponent implements OnInit {
         disableClose: true,
     };
 
-    constructor(public dialog: MatDialog, public dashboardService: DashboardService, private sharedService: SharedService) {}
+    constructor(public dialog: MatDialog, public dashboardService: DashboardService, private sharedService: EventService) {}
 
     ngOnInit() {
         this.sharedService.getSubscriber('dashboard').subscribe((res) => {
